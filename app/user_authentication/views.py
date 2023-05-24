@@ -16,6 +16,8 @@ class UserRegistrationView(APIView):
     def get(self, request):
         res = services.view_users(request=request)
         return Response(res)    
-    def post(self,request,format=None):
+    
+    def post(self,request):
         res = services.user_registration(request=request)
         return Response(res)
+
